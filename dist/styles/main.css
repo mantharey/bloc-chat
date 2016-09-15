@@ -1,0 +1,53 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 100%;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 0.5rem;
+    background-color: #42455C;
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+}
+
+nav h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav a {
+  cursor: pointer;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 0.75rem;
+  position: relative;
+  left: 0;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 225px;
+  height: 100%;
+  padding: 0.5rem;
+}
