@@ -11,12 +11,6 @@
             url: '/',
             controller: 'LandingCtrl as landing',
             templateUrl: '/templates/landing.html'
-          })
-
-          .state('messages', {
-            url: '/messages',
-            controller: 'MessagesCtrl as messages',
-            templateUrl: '/templates/messages.html'
           });
     }
     angular
