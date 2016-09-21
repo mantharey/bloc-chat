@@ -1,8 +1,6 @@
 (function() {
-    function LandingCtrl(Room, $uibModal) {
+    function RoomModalCtrl(Room, $ubiModal) {
         var $ctrl = this;
-
-        this.heroTitle = "Let's Chat!";
 
         $ctrl.rooms = Room.all
 
@@ -16,11 +14,18 @@
         $ctrl.open = function () {
           var modalInstance = $uibModal.open({
             templateUrl: "NewRoomModal.html",
+            controller: "NewRoomModalCtrl",
+            controllerAs: "newroommodal"
           });
         };
+
+        // $ctrl.cancel = function () {
+        //   $uibModalInstance.dismiss('cancel');
+        // };
+
     }
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room','$uibModal', LandingCtrl]);
+        .controller('RoomModalCtrl', ['Room','$uibModal', RoomModalCtrl]);
 })();

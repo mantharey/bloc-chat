@@ -1,9 +1,8 @@
 (function() {
-    function LandingCtrl(Room) {
+    function LandingCtrl(Room, $uibModal) {
         var $ctrl = this;
 
         this.heroTitle = "Let's Chat!";
-
 
         $ctrl.rooms = Room.all
 
@@ -11,14 +10,17 @@
         window.foo = this.rooms
 
         this.createNewRoom = function(newRoom){
-          console.log("newRoom: " + newRoom)
           $ctrl.rooms.$add({name: newRoom});
-          // console.log("Meow Two")
-          // console.log($ctrl.newRoom);
         }
+
+        $ctrl.open = function () {
+          var modalInstance = $uibModal.open({
+            templateUrl: "NewRoomModal.html",
+          });
+        };
     }
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room', LandingCtrl]);
+        .controller('LandingCtrl', ['Room','$uibModal', LandingCtrl]);
 })();
