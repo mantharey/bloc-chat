@@ -2,7 +2,7 @@
     <h1>Bloc Chat</h1>
     <button type="button" class="btn btn-default" ng-click="landing.open()">New Room</button>
 
-<!-- Form -->
+<!-- Working Form -->
     <!-- <form ng-controller="LandingCtrl">
       <input type="text" ng-model= "landing.newRoom" name="text"></input>
       <input type="submit" ng-click="landing.createNewRoom(landing.newRoom)"></input>
@@ -24,12 +24,18 @@
 <!-- Modal Crap -->
 <script id="NewRoomModal.html" class="modal" type="text/ng-template">
   <div class="modal-header">
-      <h3 class="modal-title">Create a New Room</h3>
+      <h3 class="modal-title">{{newRoomModal.foo}} Create a New Room</h3>
   </div>
   <div class="modal-body">
-    <form ng-controller="RoomModalCtrl">
-      <input type="text" class=" " ng-model= "modal.newRoom" name="text"></input>
-      <input type="submit" class="btn" ng-click="modal.createNewRoom(modal.newRoom)"></input>
+    <p>Enter a new room name:</p>
+    <form>
+      <input type="text" class=" " ng-model= "newRoomModal.newRoom" name="text"></input>
+      <input type="submit" class="btn" ng-click="newRoomModal.createNewRoom(newRoomModal.newRoom)"></input>
     </form>
   </div>
+  <div class="modal-footer">
+      <button class="btn btn-warning" type="button" ng-click="newRoomModal.cancel()">Cancel</button>
+
+  </div>
+</div>
 </script>

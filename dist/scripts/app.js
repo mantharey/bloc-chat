@@ -11,11 +11,6 @@
             url: '/',
             controller: 'LandingCtrl as landing',
             templateUrl: '/templates/landing.html'
-          })
-          .state('newroommodal', {
-            url: '/newroommodal',
-            controller: 'NewRoomModalCtrl as newroommodal',
-            templateUrl: '/templates/NewRoomModal.html'
           });
     }
     angular

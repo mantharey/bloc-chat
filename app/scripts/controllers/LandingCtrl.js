@@ -16,6 +16,8 @@
         $ctrl.open = function () {
           var modalInstance = $uibModal.open({
             templateUrl: "NewRoomModal.html",
+            controller: "NewRoomModalCtrl",
+            controllerAs: "newRoomModal"
           });
         };
     }
