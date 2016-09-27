@@ -5,7 +5,14 @@
 
     return {
       // Public Interface of Room object, this is the stuff that other files can access
-      all: rooms
+      all: rooms,
+      create: function(newRoom) {
+         //create method logic
+      },
+      getMessages: function(roomId) {
+         //getMessages query logic
+         
+      }
     };
   }
 
