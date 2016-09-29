@@ -12,14 +12,11 @@
 
 <section class="hero-content">
     <h1 class="hero-title">{{ landing.heroTitle }}</h1>
-    <!-- {{landing.currentRoom}} -->
-      <div ng-repeat="messages in landing.messages">
           <ul>
-            <li>
-            {{landing.messages}}
+            <li ng-repeat="message in landing.messages">
+               {{message.username}} : {{message.content}}
             </li>
          </ul>
-      </div>
 </section>
 
 <!-- New Room Modal -->
