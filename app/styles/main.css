@@ -42,6 +42,7 @@ nav ul {
   padding-left: 0.75rem;
   position: relative;
   left: 0;
+  cursor: pointer;
 }
 
 section {
@@ -53,6 +54,7 @@ section {
 }
 
 .btn {
+  font-size: 12px;
   border: 0;
   color: #ffffff;
   padding: 7px;
