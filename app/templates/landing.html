@@ -1,5 +1,8 @@
 <nav class="navbar">
-   <h1>Bloc Chat</h1>
+   <div class="title">
+      <h1>Bloc Chat</h1>
+   </div>
+   <p class="user">Signed in as: {{landing.currentUser}}</p>
    <button type="button" class="btn btn-default" ng-click="landing.open()">New Room</button>
     <br><br>
     Rooms:
@@ -18,22 +21,3 @@
             </li>
          </ul>
 </section>
-
-<!-- New Room Modal -->
-<script id="NewRoomModal.html" class="modal" type="text/ng-template">
-   <div class="modal-header">
-      <h3 class="modal-title">Create a New Room</h3>
-   </div>
-   <div class="modal-body">
-     <p>Enter a new room name:</p>
-     <form>
-        <input type="text" class="newRoomForm" ng-model= "newRoomModal.newRoom" name="text"></input>
-     </form>
-   </div>
-   <div class="modal-footer">
-      <br>
-      <button class="btnclose" type="button" ng-click="newRoomModal.cancel()">Cancel</button>
-      <input type="submit" class="btnsubmit" ng-click="newRoomModal.createNewRoom(newRoomModal.newRoom)"></input>
-      //can I have an ng-submit and an ng-click in the same thing? the modal does not close after pressing the submit button.
-   </div>
-</script>

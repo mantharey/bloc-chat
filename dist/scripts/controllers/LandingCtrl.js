@@ -1,6 +1,7 @@
 (function() {
-    function LandingCtrl(Room, $uibModal, $firebaseArray) {
+    function LandingCtrl(Room, $uibModal, $firebaseArray, $cookies) {
         var $ctrl = this;
+        this.currentUser = $cookies.get('blocChatCurrentUser');
         this.heroTitle = "Let's Chat!";
         $ctrl.rooms = Room.all
 
@@ -15,7 +16,7 @@
 
         $ctrl.open = function () {
           var modalInstance = $uibModal.open({
-            templateUrl: "NewRoomModal.html",
+            templateUrl: './templates/NewRoomModal.html',
             controller: "NewRoomModalCtrl",
             controllerAs: "newRoomModal"
           });
@@ -24,5 +25,5 @@
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room','$uibModal','$firebaseArray', LandingCtrl]);
+        .controller('LandingCtrl', ['Room','$uibModal','$firebaseArray', '$cookies', LandingCtrl]);
 })();

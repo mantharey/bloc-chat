@@ -15,6 +15,13 @@ body {
     color: black;
 }
 
+nav.title {
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 50%;
+  color: yellow;
+}
+
 nav {
     position: absolute;
     top: 0;
@@ -26,11 +33,7 @@ nav {
     z-index: 1;
     color: white;
     text-decoration: none;
-}
-
-nav h1 {
-  font-size: 25px;
-  font-weight: bold;
+    font-weight: 100;
 }
 
 nav a {
