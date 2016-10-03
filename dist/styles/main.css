@@ -3,59 +3,33 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 html {
     height: 100%;
-    font-size: 100%;
 }
-
 body {
     background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     color: black;
 }
-
-nav.title {
-  font-size: 25px;
-  font-weight: bold;
-  line-height: 50%;
-  color: yellow;
-}
-
 nav {
     position: absolute;
     top: 0;
     left: 0;
-    width: 225px;
+    width: 17%;
     height: 100%;
     padding: 0.5rem;
     background-color: #42455C;
     z-index: 1;
     color: white;
-    text-decoration: none;
-    font-weight: 100;
 }
-
-nav a {
-  cursor: pointer;
+nav.navbar .title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 50%;
 }
-
-nav ul {
-  list-style: none;
-  padding-left: 0.75rem;
-  position: relative;
-  left: 0;
-  cursor: pointer;
+nav.navbar .user {
+   font-size: 14px;
 }
-
-section {
-  position: absolute;
-  top: 0;
-  left: 225px;
-  height: 100%;
-  padding: 0.5rem;
-}
-
 .btn {
   font-size: 12px;
   border: 0;
@@ -64,9 +38,69 @@ section {
   background: #B36E84;
   text-decoration: none;
 }
-
 .btn:hover {
   background: #DBE6C8;
   color: black;
   text-decoration: none;
+}
+nav.navbar .menu {
+   font-size: 16px;
+}
+nav ul {
+   list-style: none;
+   padding-left: 0.75rem;
+   position: relative;
+   left: 0;
+   cursor: pointer;
+}
+section {
+   position: absolute;
+   left: 17%;
+   width: 83%;
+   padding-left: 0.5rem;
+   font-size: 14.5px;
+}
+section.top-bar {
+  position: absolute;
+  top: 0;
+  background-color: #FAD9CD;
+  margin: 0;
+  padding-top: 0;
+  height: 70px;
+  padding-bottom: 0.5rem;
+  border-bottom-style: solid;
+  border-bottom-color: gray;
+  border-bottom-width: 1px;
+}
+section.top-bar h1 {
+  margin: 0;
+  padding-top: 0.5rem;
+}
+section.top-bar h3 {
+  margin: 0;
+  padding-top: 0.5;
+  font-weight: 300;
+  color: #2B2B2B;
+}
+section.chat {
+   position: absolute;
+   top: 75px;
+   margin: 0;
+   padding-top: 0.5rem;
+   padding-right: 0.5rem;
+}
+section.chat .chat-content{
+   margin-top: 0.2rem;
+   padding-bottom: 1rem;
+   padding-top: 0;
+   border-bottom-style: solid;
+   border-bottom-color: gray;
+   border-bottom-width: 1px;
+}
+section.chat .chat-author {
+   font-weight: bold;
+}
+section.chat .chat-time {
+   float: right;
+   color: grey;
 }

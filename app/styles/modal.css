@@ -11,8 +11,6 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
-/* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
@@ -20,16 +18,13 @@
     border: 1px solid #888;
     width: 25%; /* Could be more or less, depending on screen size */
 }
-
 .modal-footer {
    text-align: center;
 }
-
 .newRoomForm {
    width: 17rem;
    font-size: 16px;
 }
-
 .btnsubmit, .btnclose {
   border: 0;
   color: #ffffff;

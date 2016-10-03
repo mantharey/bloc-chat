@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html ng-app="blocChat">
 <head lang="en">
-    <meta charset="UTF-8">
-    <title>Bloc Chat</title>
-    <link rel="stylesheet" type="text/css" href="/styles/main.css">
-    <link rel="stylesheet" type="text/css" href="/styles/modal.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   <meta charset="UTF-8">
+   <title>Bloc Chat</title>
+   <link rel="stylesheet" type="text/css" href="/styles/main.css">
+   <link rel="stylesheet" type="text/css" href="/styles/modal.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
+   <ui-view></ui-view>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+   <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.3.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+   <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.3.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
+   <script src="/scripts/app.js"></script>
+   <script src="/scripts/BlocChatCookies.js"></script>
+   <script src="/scripts/controllers/LandingCtrl.js"></script>
+   <script src="/scripts/controllers/NewRoomModalCtrl.js"></script>
+   <script src="/scripts/services/Room.js"></script>
 
-
-  <ui-view></ui-view>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
-  <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.3.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-  <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.1.3.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/BlocChatCookies.js"></script>
-  <script src="/scripts/controllers/LandingCtrl.js"></script>
-  <script src="/scripts/controllers/NewRoomModalCtrl.js"></script>
-  <script src="/scripts/services/Room.js"></script>
-
-  <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
-  <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
+   <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+   <script src="https://cdn.firebase.com/libs/angularfire/2.0.2/angularfire.js"></script>
+   <script>
+      // Initialize Firebase
+      var config = {
       apiKey: "AIzaSyD9heVq9L0FLp4J4MSw0miqp9NH9B7QVdk",
       authDomain: "bloc-chat-e2bbd.firebaseapp.com",
       databaseURL: "https://bloc-chat-e2bbd.firebaseio.com",
       storageBucket: "bloc-chat-e2bbd.appspot.com",
-    };
-    firebase.initializeApp(config);
-  </script>
-
+      };
+      firebase.initializeApp(config);
+    </script>
 </body>
 </html>
