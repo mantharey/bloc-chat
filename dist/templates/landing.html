@@ -25,7 +25,14 @@
 
 <section class="chat">
    <div class="chat-message" ng-repeat="message in landing.messages">
-      <strong class="chat-author">{{message.username}}</strong> <small class="chat-time">{{message.sentAt}}</small>
+      <strong class="chat-author">{{message.username}}</strong> <small class="chat-time">{{message.sentAt | date:'short'}}</small>
       <p class="chat-content">{{message.content}}</p>
    </div>
+</section>
+
+<section class="message-bar">
+   <form>
+      <input type="text" class="newMessageForm" name="text" ng-model="landing.newMessage.content"></input>
+      <input type="submit" class="btnsubmit" ng-click="landing.sendMessage()"></input>
+   </form>
 </section>

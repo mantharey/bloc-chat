@@ -1,5 +1,5 @@
 (function() {
-    function LandingCtrl(Room, $uibModal, $firebaseArray, $cookies) {
+    function LandingCtrl(Room, Message, $uibModal, $firebaseArray, $cookies) {
         var $ctrl = this;
         this.currentUser = $cookies.get('blocChatCurrentUser');
         this.heroTitle = "Let's Chat!";
@@ -11,9 +11,25 @@
             $ctrl.messages = $firebaseArray(ref)
         }
 
+        $ctrl.sendMessage = function(){
+           console.log("sendMessage() was called")
+            var message = {
+               content: $ctrl.newMessage.content,
+               sentAt: Date.now(),
+               username: $ctrl.currentUser,
+               roomId: $ctrl.currentRoom.$id
+            }
+
+            console.log(message)
+
+            Message.send(message)
+        }
+
         // Remember to do this to manipulate and debug things:
         window.foo = this.rooms
+        window.bar = this.messages
 
+        // Modal
         $ctrl.open = function () {
           var modalInstance = $uibModal.open({
             templateUrl: './templates/NewRoomModal.html',
@@ -25,5 +41,5 @@
 
     angular
         .module('blocChat')
-        .controller('LandingCtrl', ['Room','$uibModal','$firebaseArray', '$cookies', LandingCtrl]);
+        .controller('LandingCtrl', ['Room', 'Message', '$uibModal', '$firebaseArray', '$cookies', LandingCtrl]);
 })();
