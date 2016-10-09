@@ -19,10 +19,9 @@
                username: $ctrl.currentUser,
                roomId: $ctrl.currentRoom.$id
             }
-
             console.log(message)
-
-            Message.send(message)
+            $ctrl.newMessage = {};
+            Message.send(message);
         }
 
         // Remember to do this to manipulate and debug things:

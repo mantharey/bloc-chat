@@ -12,14 +12,14 @@ body {
     color: black;
 }
 nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 17%;
     height: 100%;
     padding: 0.5rem;
     background-color: #42455C;
-    z-index: 1;
+    z-index: 100;
     color: white;
 }
 nav.navbar .title {
@@ -54,16 +54,17 @@ nav ul {
    cursor: pointer;
 }
 section {
-   position: absolute;
+   position: fixed;
    left: 17%;
    width: 83%;
    padding-left: 0.5rem;
    font-size: 14.5px;
 }
 section.top-bar {
-  position: absolute;
+  position: fixed;
   top: 0;
-  background-color: #FAD9CD;
+  z-index: 100;
+  background-color: #B36E84;
   margin: 0;
   padding-top: 0;
   height: 70px;
@@ -75,17 +76,20 @@ section.top-bar {
 section.top-bar h1 {
   margin: 0;
   padding-top: 0.5rem;
+  color: white;
 }
 section.top-bar h3 {
   margin: 0;
   padding-top: 0.5;
   font-weight: 300;
-  color: #2B2B2B;
+  color: white;
 }
 section.chat {
    position: absolute;
-   top: 75px;
-   margin: 0;
+   /*top: 75px;
+   bottom: 75px;*/
+   margin-top: 75px;
+   margin-bottom: 75px;
    padding-top: 0.5rem;
    padding-right: 0.5rem;
 }
@@ -103,4 +107,28 @@ section.chat .chat-author {
 section.chat .chat-time {
    float: right;
    color: grey;
+}
+section.message-bar {
+  position: fixed;
+  bottom: 0;
+  z-index: 90;
+  background-color: #EBA7AB;
+  margin: 0;
+  height: 70px;
+  padding: 1rem;
+  border-top-style: solid;
+  border-top-color: gray;
+  border-top-width: 1px;
+  text-align: right;
+}
+section.message-bar .newMessageForm {
+   width: 85%;
+   height: 2rem;
+   font-size: 14px;
+}
+section.message-bar .btnsubmit {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
 }

@@ -25,7 +25,7 @@
 
 <section class="chat">
    <div class="chat-message" ng-repeat="message in landing.messages">
-      <strong class="chat-author">{{message.username}}</strong> <small class="chat-time">{{message.sentAt | date:'short'}}</small>
+      <strong class="chat-author">{{message.username}}</strong> <small class="chat-time"><em>{{message.sentAt | date:'short'}}</em></small>
       <p class="chat-content">{{message.content}}</p>
    </div>
 </section>
@@ -34,5 +34,6 @@
    <form>
       <input type="text" class="newMessageForm" name="text" ng-model="landing.newMessage.content"></input>
       <input type="submit" class="btnsubmit" ng-click="landing.sendMessage()"></input>
+      <!-- how can I get this message to clear after I press submit? -->
    </form>
 </section>
